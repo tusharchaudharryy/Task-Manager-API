@@ -5,7 +5,7 @@ const asyncWrapper = require('../middleware/async')
 const getAllTasks = asyncWrapper(async (req,res)=>{
     const tasks = await Task.find({})  // get all data or document, if we provide some conditions then data statisfying those will go in database
     res.status(200).json({tasks}) 
-})
+}) 
   
 const createTask = asyncWrapper(async(req,res)=>{
     const task = await Task.create(req.body)
