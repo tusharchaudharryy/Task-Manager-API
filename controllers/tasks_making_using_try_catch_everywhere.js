@@ -1,7 +1,7 @@
 const express = require('express')
 const Task = require('../models/Task')
 
-const getAllTasks = async (req,res)=>{
+const getAllTasks = async (req,res)=>{ 
     try{
         const tasks = await Task.find({})  // get all data or document, if we provide some conditions then data statisfying those will go in database
         res.status(200).json({tasks})
